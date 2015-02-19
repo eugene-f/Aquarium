@@ -11,4 +11,14 @@ class Aquarium extends Item {
         this.volume = volume;
     }
 
+    public static int calculateTotalPrice() {
+        int total = 0;
+
+        for(Item item : listItems) {
+            total += item.getItemPrice();
+        }
+
+        return total;
+    }
+
 }

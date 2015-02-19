@@ -16,16 +16,6 @@ public class Runner {
         new Accessory("Generator", 1240);
     }
 
-    private static int getTotalPrice() {
-        int totalPrice = 0;
-
-        for (Item item : Aquarium.listItems) {
-            totalPrice += item.getItemPrice();
-        }
-
-        return totalPrice;
-    }
-
     private static void printData() {
 
         System.out.println("You get " + Aquarium.listItems.size() + " items:\n");
@@ -39,7 +29,7 @@ public class Runner {
         }
 
         System.out.println("==================================================\n");
-        System.out.println("Total price: " + getTotalPrice() + "$");
+        System.out.println("Total price: " + Aquarium.calculateTotalPrice() + "$");
     }
 
 }
